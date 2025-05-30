@@ -1,0 +1,98 @@
+copy_command "wl-copy"
+copy_on_select true
+theme "catppuccin-mocha"
+themes {
+  catppuccin-mocha {
+    bg "#585b70"
+    black "#181825"
+    blue "#89b4fa"
+    cyan "#89dceb"
+    fg "#cdd6f4"
+    green "#a6e3a1"
+    magenta "#f5c2e7"
+    orange "#fab387"
+    red "#f38ba8"
+    white "#cdd6f4"
+    yellow "#f9e2af"
+  }
+}
+
+layout {
+
+  tab name="Main" {
+    pane {
+      pane
+    }
+    pane size=1 borderless=true {
+      plugin location="zellij:compact-bar"
+    }
+  }
+
+  tab name="Notes" {
+    pane {
+      pane cwd="~/Documents/Notes" command="nvim" size="80%"
+      pane cwd="~/Documents/Notes" size="20%"
+    }
+    pane size=1 borderless=true {
+      plugin location="zellij:compact-bar"
+    }
+  }
+
+  tab name="Administration" {
+    pane {
+      pane split_direction="horizontal" {
+        pane split_direction="vertical" {
+          pane
+          pane
+        }
+      }
+      pane split_direction="horizontal" {
+        pane split_direction="vertical" {
+          pane
+          pane
+        }
+      }
+    }
+    pane size=1 borderless=true {
+      plugin location="zellij:compact-bar"
+    }
+  }
+
+  tab name="Realms" {
+    floating_panes {
+      pane command="htop" {
+        x "10%"
+        y "10%"
+        width "40%"
+        height "55%"
+      }
+      pane {
+        x "60%"
+        y "60%"
+        width "40%"
+        height "55%"
+      }
+    }
+    pane split_direction="horizontal" {
+      pane cwd="~/Projects/Repos/Realms" command="yazi" size="65%"
+      pane split_direction="vertical" size="35%"{
+        pane cwd="~/Projects/Repos/Realms"
+        pane cwd="~/Projects/Repos/Realms"
+      }
+    }
+    pane size=1 borderless=true {
+      plugin location="zellij:compact-bar"
+    }
+  }
+
+  tab name="Slither" {
+    pane split_direction="horizontal" {
+      pane cwd="~/Projects/Repos/slither" size="60%"
+      pane cwd="~/Projects/Repos/slither" size="40%"
+    }
+    pane size=1 borderless=true {
+      plugin location="zellij:compact-bar"
+    }
+  }
+
+}
