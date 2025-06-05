@@ -1,33 +1,52 @@
 {
   imports = [
-    ./data/postgres/asgard.nix
-    ./data/postgres/base.nix
-    ./metal/bash.nix
-    ./metal/bootEFI.nix
-    ./metal/bootGRUB.nix
-    ./metal/cpu.nix
-    ./metal/docs.nix
-    ./metal/environment.nix
-    ./metal/fhb.nix
-    ./metal/governor.nix
-    ./metal/kernel.nix
-    ./metal/locale.nix
-    ./metal/network.nix
-    ./metal/nix.nix
-    ./metal/nixpkgs.nix
-    ./metal/promtail.nix
-    ./metal/sops.nix
-    ./metal/state.nix
-    ./metal/timezone.nix
-    ./metal/users.nix
-    ./metal/vmVariant.nix
-    ./metal/zfs.nix
-    ./metal/zram.nix
-    ./metal/template/abyss.nix
-    ./metal/template/yggdrasil.nix
+    ./com/appimages.nix
+    ./com/bash.nix
+    ./com/bootEFI.nix
+    ./com/bootGRUB.nix
+    ./com/cpu.nix
+    ./com/docs.nix
+    ./com/environment.nix
+    ./com/fhb.nix
+    ./com/fstrim.nix
+    ./com/gnupg.nix
+    ./com/governor.nix
+    ./com/k3s.nix
+    ./com/kernel.nix
+    ./com/locale.nix
+    ./com/logrotate.nix
+    ./com/network.nix
+    ./com/nix.nix
+    ./com/nixpkgs.nix
+    ./com/node-exporter.nix
+    ./com/openrgb.nix
+    ./com/openssh.nix
+    ./com/pipewire.nix
+    ./com/postgres.nix
+    ./com/qdrant.nix
+    ./com/qemuguest.nix
+    ./com/sops.nix
+    ./com/state.nix
+    ./com/timezone.nix
+    ./com/udisks.nix
+    ./com/users.nix
+    ./com/vmVariant.nix
+    ./com/xserver.ni
+    ./com/zfs.nix
+    ./com/zram.nix
+    ./com/zsh.nix
+
+    ./data/postgres.nix
+
+    ./hosts/template/abyss.nix
+    ./hosts/base.nix
+    ./hosts/template/yggdrasil.nix
+
+    ./net/k3s.nix
     ./net/node-exporter.nix
     ./net/openssh.nix
     ./net/sunshine.nix
+
     ./net/service/borg/abyss.nix
     ./net/service/borg/aegir.nix
     ./net/service/borg/asgard.nix
@@ -47,7 +66,9 @@
     ./net/service/syncthing/base.nix
     ./net/service/syncthing/abyss.nix
     ./net/service/syncthing/yggdrasil.nix
+
     ./net/vpn/openvpn
+
     ./programs/appimages.nix
     ./programs/firejail.nix
     ./programs/gnupg.nix
