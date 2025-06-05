@@ -15,43 +15,25 @@ in {
         aliases = {
         };
         quickmarks = {
-          anime = "https://hianime.tv/";
           gog = "https://www.gog.com/en/";
-          guix-cookbook = "https://guix.gnu.org/cookbook/en/guix-cookbook.html";
-          homepage = "http://192.168.70.5:8082/";
+          anime = "https://hianime.tv/";
           world = "https://lemmy.world/";
+          homepage = "http://192.168.70.5:8082/";
+          guix-cookbook = "https://guix.gnu.org/cookbook/en/guix-cookbook.html";
         };
         greasemonkey = [
           (pkgs.fetchurl {
             url = "https://raw.githubusercontent.com/afreakk/greasemonkeyscripts/1d1be041a65c251692ee082eda64d2637edf6444/reddit_adblock.js";
             sha256 = "sha256-KmCXL4GrZtwPLRyAvAxADpyjbdY5UFnS/XKZFKtg7tk=";
           })
-          # (pkgs.fetchurl {
-          #   url = "https://raw.githubusercontent.com/afreakk/greasemonkeyscripts/1d1be041a65c251692ee082eda64d2637edf6444/youtube_adblock.js";
-          #   sha256 = "sha256-EuGTJ9Am5C6g3MeTsjBQqyNFBiGAIWh+f6cUtEHu3iI=";
-          # })
+          (pkgs.fetchurl {
+            url = "https://raw.githubusercontent.com/afreakk/greasemonkeyscripts/1d1be041a65c251692ee082eda64d2637edf6444/youtube_adblock.js";
+            sha256 = "sha256-EuGTJ9Am5C6g3MeTsjBQqyNFBiGAIWh+f6cUtEHu3iI=";
+          })
           (pkgs.fetchurl {
             url = "https://raw.githubusercontent.com/afreakk/greasemonkeyscripts/1d1be041a65c251692ee082eda64d2637edf6444/youtube_sponsorblock.js";
             sha256 = "sha256-e3QgDPa3AOpPyzwvVjPQyEsSUC9goisjBUDMxLwg8ZE=";
           })
-          (pkgs.writeText "skip_youtube_ad.js" ''
-            // ==UserScript==
-            // @name  Skip Youtube Ads
-            // @description Skips Ads in Youtube Videos
-            // @run-at document-start
-            // @include *.youtube.com/*
-            // ==/UserScript==
-            document.addEventListener('load', () => {
-                const btn = document.querySelector('.videoAdUiSkipButton,.ytp-ad-skip-button-modern')
-                if (btn) {
-                    btn.click()
-                }
-                const ad = [...document.querySelectorAll('.ad-showing')][0];
-                if (ad) {
-                    document.querySelector('video').currentTime = 9999999999;
-                }
-            }, true);
-          '')
         ];
         searchEngines = {
           a = "https://hianimez.to/search?keyword={}";

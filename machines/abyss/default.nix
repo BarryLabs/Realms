@@ -4,47 +4,41 @@
     ./variables.nix
     ../../modules/system
   ];
+
   augs = {
-    metal = {
-      template = {
-        abyss.enable = true;
-      };
-    };
-    net = {
-      backup = {
-        borg = {
-          abyss.enable = true;
-        };
-      };
-      node-exporter.enable = true;
+    hosts.abyss.enable = true;
+    borg.abyss.enable = true;
+    com = {
+      fstrim.enable = true;
+      gnupg.enable = true;
+      logrotate.enable = true;
       openssh.enable = true;
-      syncthing.abyss.enable = true;
-      vpn.openvpn.mullvadUS.enable = true;
+      pipewire.enable = true;
+      podman.enable = true;
+      udisks.enable = true;
+      virt-manager.enable = true;
+      waydroid.enable = true;
+      xserver.enable = true;
+      zsh.enable = true;
     };
     programs = {
       appimages.enable = true;
       firejail.enable = true;
-      gnupg.enable = true;
       hyprland.enable = true;
-      localsend.enable = true;
+      localsend.enable = false;
       steam.enable = true;
-      zsh.enable = true;
+      weylus.enable = false;
     };
     services = {
       flatpak.enable = false;
       sddm.enable = true;
+      node-exporter.enable = true;
     };
-    system = {
-      fstrim.enable = true;
-      logrotate.enable = true;
-      pipewire.enable = true;
-      udisks.enable = true;
-      xserver.enable = true;
-    };
-    virtualisation = {
-      podman.enable = true;
-      virt-manager.enable = true;
-      waydroid.enable = true;
+    sync.abyss.enable = true;
+    vpn = {
+      openvpn = {
+        wun.enable = false;
+      };
     };
   };
 }

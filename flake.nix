@@ -1,6 +1,9 @@
 {
   description = ''
     Realms
+
+    Install pre-configured servers including my daily drivers
+    or pull simple modules for your own configuration.
   '';
 
   inputs = {
@@ -39,6 +42,7 @@
     ...
   }: let
     arch = {
+      sysMob = "aarch64-linux";
       sys32 = "i686-linux";
       sys64 = "x86_64-linux";
       sysMac = "x86_64-darwin";

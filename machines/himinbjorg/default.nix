@@ -4,37 +4,31 @@
     ./variables.nix
     ../../modules/system
   ];
-
   augs = {
-    metal = {
-      base = {
-        bash.enable = true;
-        bootGRUB.enable = true;
-        cpu.enable = false;
-        docs.enable = true;
-        environment.enable = true;
-        governor.enable = true;
-        kernel.enable = true;
-        locale.enable = true;
-        network.enable = true;
-        nix.enable = true;
-        nixpkgs.enable = true;
-        promtail.enable = true;
-        sops.enable = false;
-        state.enable = true;
-        timezone.enable = true;
-        users.enable = true;
-        vmVariant.enable = true;
-        zfs.enable = false;
-        zram.enable = false;
-      };
-    };
-    net = {
-      node-exporter.enable = true;
+    com = {
+      bash.enable = true;
+      bootEFI.enable = false;
+      bootGRUB.enable = false;
+      cpu.enable = false;
+      docs.enable = true;
+      environment.enable = true;
+      governor.enable = true;
+      kernel.enable = true;
+      locale.enable = true;
+      network.enable = true;
+      nix.enable = true;
+      nixpkgs.enable = true;
       openssh.enable = true;
-    };
-    system = {
       qemuguest.enable = true;
+      sops.enable = false;
+      state.enable = true;
+      timezone.enable = true;
+      users.enable = true;
+      vmVariant.enable = true;
+    };
+    services = {
+      node-exporter.enable = false;
+      promtail.enable = false;
     };
   };
 
@@ -45,19 +39,6 @@
   };
 
   # sops = {
-  #   secrets = {
-  #     borgJob = {
-  #       mode = "0400";
-  #     };
-  #     bbAegir = {
-  #       mode = "0400";
-  #     };
-  #     localAegirEncKey = {
-  #       mode = "0400";
-  #     };
-  #     remoteAegirEncKey = {
-  #       mode = "0400";
-  #     };
-  #   };
+  #   secrets = {};
   # };
 }

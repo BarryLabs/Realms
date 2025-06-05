@@ -6,47 +6,36 @@
   ];
 
   augs = {
-    metal = {
-      base = {
-        bash.enable = true;
-        bootGRUB.enable = true;
-        cpu.enable = false;
-        docs.enable = true;
-        environment.enable = true;
-        governor.enable = true;
-        kernel.enable = true;
-        locale.enable = true;
-        network.enable = true;
-        nix.enable = true;
-        nixpkgs.enable = true;
-        promtail.enable = true;
-        sops.enable = false;
-        state.enable = true;
-        timezone.enable = true;
-        users.enable = true;
-        vmVariant.enable = true;
-      };
-    };
-    net = {
-      backup = {
-        borg = {
-          aegir.enable = false;
-        };
-      };
-      node-exporter.enable = true;
+    com = {
+      bash.enable = true;
+      bootEFI.enable = false;
+      bootGRUB.enable = true;
+      cpu.enable = false;
+      docs.enable = true;
+      environment.enable = true;
+      governor.enable = false;
+      locale.enable = true;
+      network.enable = true;
+      nix.enable = true;
+      nixpkgs.enable = true;
       openssh.enable = true;
-      service = {
-        media = {
-          aegir.enable = false;
-        };
-      };
+      qemuguest.enable = true;
+      sops.enable = false;
+      state.enable = true;
+      timezone.enable = true;
+      users.enable = true;
+      vmVariant = false;
+      zram.enable = false;
+      zfs.enable = false;
+    };
+    services = {
+      arr.enable = false;
+      node-exporter.enable = false;
+      promtail.enable = false;
     };
     oci = {
       torrent.enable = false;
       transcode.enable = false;
-    };
-    system = {
-      qemuguest.enable = true;
     };
   };
 
@@ -68,6 +57,15 @@
           install -d -m 755 /srv/Media -o root -g root
         '';
       };
+    };
+  };
+
+  nixpkgs = {
+    config = {
+      permittedInsecurePackages = [
+        "dotnet-sdk-6.0.428"
+        "aspnetcore-runtime-6.0.36"
+      ];
     };
   };
 
@@ -101,13 +99,4 @@
   #     };
   #   };
   # };
-
-  nixpkgs = {
-    config = {
-      permittedInsecurePackages = [
-        "dotnet-sdk-6.0.428"
-        "aspnetcore-runtime-6.0.36"
-      ];
-    };
-  };
 }

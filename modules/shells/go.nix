@@ -5,4 +5,5 @@ pkgs.mkShell {
     gopls
     gotools
   ];
+  GOPATH = "$HOME/Projects/Go";
 }

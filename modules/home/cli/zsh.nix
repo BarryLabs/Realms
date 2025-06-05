@@ -31,7 +31,7 @@ in {
           path = "$HOME/.zsh_history";
           ignoreSpace = true;
           ignoreAllDups = true;
-          ignorePatterns = ["rm *" "pkill *" "cp *" "ls *"];
+          ignorePatterns = ["rm *" "pkill *" "cp *" "l*"];
         };
         syntaxHighlighting = {
           enable = true;

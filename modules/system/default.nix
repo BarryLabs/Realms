@@ -1,6 +1,11 @@
 {
   imports = [
-    ./com/appimages.nix
+    ./backup/borg-abyss.nix
+    ./backup/borg-aegir.nix
+    ./backup/borg-asgard.nix
+    ./backup/borg-heimskringla.nix
+    ./backup/borg-yggdrasil.nix
+
     ./com/bash.nix
     ./com/bootEFI.nix
     ./com/bootGRUB.nix
@@ -18,80 +23,74 @@
     ./com/network.nix
     ./com/nix.nix
     ./com/nixpkgs.nix
-    ./com/node-exporter.nix
     ./com/openrgb.nix
     ./com/openssh.nix
     ./com/pipewire.nix
-    ./com/postgres.nix
-    ./com/qdrant.nix
+    ./com/podman.nix
     ./com/qemuguest.nix
     ./com/sops.nix
     ./com/state.nix
     ./com/timezone.nix
     ./com/udisks.nix
     ./com/users.nix
+    ./com/virt-manager.nix
     ./com/vmVariant.nix
-    ./com/xserver.ni
+    ./com/waydroid.nix
+    ./com/xserver.nix
     ./com/zfs.nix
     ./com/zram.nix
     ./com/zsh.nix
 
-    ./data/postgres.nix
+    #./email/mailserver.nix
 
-    ./hosts/template/abyss.nix
-    ./hosts/base.nix
-    ./hosts/template/yggdrasil.nix
+    ./hosts/abyss.nix
+    #./hosts/base.nix
+    ./hosts/yggdrasil.nix
 
-    ./net/k3s.nix
-    ./net/node-exporter.nix
-    ./net/openssh.nix
-    ./net/sunshine.nix
+    #./minecraft/BigChadGuys.nix
 
-    ./net/service/borg/abyss.nix
-    ./net/service/borg/aegir.nix
-    ./net/service/borg/asgard.nix
-    ./net/service/borg/heimskringla.nix
-    ./net/service/borg/yggdrasil.nix
-    ./net/service/home/frigate.nix
-    ./net/service/home/home-assistant.nix
-    ./net/service/media/aegir.nix
-    #./net/service/minecraft/tesseract.nix
-    ./net/service/monitoring/gotify.nix
-    ./net/service/monitoring/grafana.nix
-    ./net/service/monitoring/homepage.nix
-    ./net/service/monitoring/loki.nix
-    ./net/service/monitoring/prometheus.nix
-    ./net/service/storage/gitea.nix
-    ./net/service/storage/nextcloud.nix
-    ./net/service/syncthing/base.nix
-    ./net/service/syncthing/abyss.nix
-    ./net/service/syncthing/yggdrasil.nix
+    ./nfs/nfs-asgard.nix
 
-    ./net/vpn/openvpn
+    ./oci/immich-asgard.nix
+    ./oci/paperless-asgard.nix
+    ./oci/torrent-aegir.nix
+    ./oci/transcode-aegir.nix
 
     ./programs/appimages.nix
     ./programs/firejail.nix
-    ./programs/gnupg.nix
     ./programs/hyprland.nix
     ./programs/localsend.nix
     ./programs/steam.nix
     ./programs/weylus.nix
-    ./programs/zsh.nix
+
+    ./services/arr.nix
+    ./services/database.nix
     ./services/flatpak.nix
+    ./services/frigate.nix
+    ./services/gitea.nix
+    ./services/gotify.nix
+    ./services/grafana.nix
+    ./services/home-assistant.nix
+    ./services/homepage.nix
+    ./services/loki.nix
+    ./services/n8n.nix
+    ./services/nextcloud.nix
+    ./services/node-exporter.nix
+    ./services/postgres.nix
+    ./services/prometheus.nix
+    ./services/promtail.nix
+    ./services/qdrant.nix
     ./services/sddm.nix
-    ./system/fstrim.nix
-    ./system/logrotate.nix
-    ./system/openrgb.nix
-    ./system/pipewire.nix
-    ./system/qemuguest.nix
-    ./system/udisks.nix
-    ./system/xserver.nix
-    ./virtualisation/virt-manager.nix
-    ./virtualisation/podman.nix
-    ./virtualisation/waydroid.nix
-    ./virtualisation/oci/immich.nix
-    ./virtualisation/oci/paperless.nix
-    ./virtualisation/oci/torrent.nix
-    ./virtualisation/oci/transcode.nix
+    ./services/sunshine.nix
+    ./services/syncthing.nix
+
+    ./smb/smb-asgard.nix
+
+    ./sync/sync-abyss.nix
+    ./sync/sync-asgard.nix
+    ./sync/sync-yggdrasil.nix
+
+    ./vpn/openvpn
+    ./vpn/wireguard
   ];
 }

@@ -40,7 +40,6 @@
       discord-screenaudio
       runelite
       libreoffice
-      monero-gui
       tor-browser
     ];
   };

@@ -6,44 +6,40 @@
   ];
 
   augs = {
-    metal = {
-      base = {
-        bash.enable = true;
-        bootGRUB.enable = true;
-        docs.enable = true;
-        environment.enable = true;
-        governor.enable = true;
-        kernel.enable = true;
-        locale.enable = true;
-        network.enable = true;
-        nix.enable = true;
-        nixpkgs.enable = true;
-        promtail.enable = true;
-        sops.enable = true;
-        state.enable = true;
-        timezone.enable = true;
-        users.enable = true;
-        vmVariant.enable = true;
-        zram.enable = false;
-        zfs.enable = false;
-      };
-    };
-    net = {
-      node-exporter.enable = true;
+    com = {
+      bash.enable = true;
+      bootEFI.enable = false;
+      bootGRUB.enable = false;
+      cpu.enable = false;
+      docs.enable = true;
+      environment.enable = true;
+      governor.enable = true;
+      kernel.enable = true;
+      locale.enable = true;
+      network.enable = true;
+      nix.enable = true;
+      nixpkgs.enable = true;
       openssh.enable = true;
-    };
-    system = {
       qemuguest.enable = true;
+      sops.enable = false;
+      state.enable = true;
+      timezone.enable = true;
+      users.enable = true;
+      vmVariant.enable = true;
+    };
+    services = {
+      node-exporter.enable = false;
+      promtail.enable = false;
     };
   };
 
   networking = {
     firewall = {
-      allowedTCPPorts = [22];
+      allowedTCPPorts = [];
     };
   };
 
-  sops = {
-    secrets = {};
-  };
+  # sops = {
+  #   secrets = {};
+  # };
 }

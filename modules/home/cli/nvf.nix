@@ -24,12 +24,7 @@ in {
               autoindent = false;
               shiftwidth = 2;
               tabstop = 2;
-            };
-
-            debugMode = {
-              enable = false;
-              level = 16;
-              logFile = "/tmp/nvim.log";
+              wrap = false;
             };
 
             assistant = {
@@ -61,6 +56,24 @@ in {
 
             comments = {
               comment-nvim.enable = true;
+            };
+
+            dashboard = {
+              dashboard-nvim.enable = true;
+            };
+
+            debugMode = {
+              enable = false;
+              level = 16;
+              logFile = "/tmp/nvim.log";
+            };
+
+            diagnostics = {
+              enable = true;
+              config = {
+                underline = true;
+                virtual_lines.enable = true;
+              };
             };
 
             lsp = {
@@ -99,16 +112,6 @@ in {
               zig.enable = false;
             };
 
-            visuals = {
-              nvim-scrollbar.enable = true;
-              nvim-web-devicons.enable = true;
-              nvim-cursorline.enable = true;
-              cinnamon-nvim.enable = true;
-              fidget-nvim.enable = true;
-              highlight-undo.enable = true;
-              indent-blankline.enable = true;
-            };
-
             statusline = {
               lualine = {
                 enable = true;
@@ -139,21 +142,6 @@ in {
 
             telescope = {
               enable = true;
-              setupOpts = {
-                defaults = {
-                  vimgrep_arguments = [
-                    "\${pkgs.ripgrep}/bin/rg"
-                    "--color=never"
-                    "--no-heading"
-                    "--with-filename"
-                    "--line-number"
-                    "--column"
-                    "--smart-case"
-                    "--hidden"
-                    "--no-ignore"
-                  ];
-                };
-              };
             };
 
             git = {
@@ -162,16 +150,18 @@ in {
               gitsigns.codeActions.enable = false;
             };
 
-            dashboard = {
-              alpha.enable = true;
-            };
-
             notify = {
               nvim-notify.enable = true;
             };
 
+            spellcheck = {
+              enable = true;
+              languages = ["en"];
+              programmingWordlist.enable = true;
+            };
+
             utility = {
-              ccc.enable = true;
+              ccc.enable = false;
               vim-wakatime.enable = false;
               icon-picker.enable = true;
               surround.enable = true;
@@ -179,12 +169,11 @@ in {
               motion = {
                 hop.enable = true;
                 leap.enable = true;
-                precognition.enable = true;
+                precognition.enable = false;
               };
-
               images = {
                 image-nvim = {
-                  enable = true;
+                  enable = false;
                   setupOpts = {
                     backend = "kitty";
                   };
@@ -193,6 +182,7 @@ in {
             };
 
             notes = {
+              todo-comments.enable = true;
               neorg = {
                 enable = true;
                 treesitter = {
@@ -220,25 +210,27 @@ in {
                   };
                 };
               };
-              todo-comments.enable = true;
             };
 
             ui = {
               borders.enable = true;
-              noice.enable = true;
               colorizer.enable = true;
-              modes-nvim.enable = true;
+              fastaction.enable = true;
               illuminate.enable = true;
+              noice.enable = true;
               smartcolumn = {
                 enable = true;
-                setupOpts.custom_colorcolumn = {
-                  nix = "110";
-                  ruby = "120";
-                  java = "130";
-                  go = ["90" "130"];
-                };
               };
-              fastaction.enable = true;
+            };
+            visuals = {
+              nvim-scrollbar.enable = false;
+              nvim-web-devicons.enable = true;
+              nvim-cursorline.enable = true;
+              cinnamon-nvim.enable = true;
+              fidget-nvim.enable = true;
+              highlight-undo.enable = true;
+              indent-blankline.enable = true;
+              rainbow-delimiters.enable = true;
             };
           };
         };

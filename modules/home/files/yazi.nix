@@ -28,11 +28,6 @@ in {
             sort_sensitive = true;
             show_symlink = true;
           };
-          tasks = {
-            micro_workers = 5;
-            macro_workers = 10;
-            bizarre_retry = 5;
-          };
         };
         theme = {
           filetype = {
@@ -42,7 +37,7 @@ in {
                 name = "*";
               }
               {
-                fg = "#89b4fa";
+                fg = "#89B4FA";
                 name = "*/";
               }
               {
@@ -58,7 +53,7 @@ in {
                 mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}";
               }
               {
-                fg = "#a6e3a1";
+                fg = "#eba0ac";
                 mime = "application/{pdf,doc,rtf}";
               }
             ];

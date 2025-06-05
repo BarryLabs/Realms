@@ -1,5 +1,5 @@
+**/secrets
 **/oci
-**/borg
-secrets/*
-.sops.yaml
-**/homepage.nix
+**/backup
+**.yaml
+**homepage.nix

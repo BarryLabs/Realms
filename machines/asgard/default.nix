@@ -10,59 +10,52 @@
   ];
 
   augs = {
-    metal = {
-      base = {
-        bash.enable = true;
-        bootEFI.enable = false;
-        bootGRUB.enable = true;
-        docs.enable = true;
-        environment.enable = true;
-        governor.enable = true;
-        kernel.enable = true;
-        locale.enable = true;
-        network.enable = true;
-        nix.enable = true;
-        nixpkgs.enable = true;
-        promtail.enable = true;
-        sops.enable = false;
-        state.enable = true;
-        timezone.enable = true;
-        users.enable = true;
-        vmVariant.enable = true;
-        zram.enable = false;
-        zfs.enable = true;
-      };
-    };
-    data = {
-      postgres = {
-        asgard.enable = true;
-      };
-    };
-    net = {
-      backups = {
-        borg.asgard.enable = true;
-      };
-      node-exporter.enable = true;
+    com = {
+      bash.enable = true;
+      bootEFI.enable = false;
+      bootGRUB.enable = false;
+      cpu.enable = false;
+      docs.enable = true;
+      environment.enable = true;
+      governor.enable = false;
+      kernel.enable = false;
+      locale.enable = true;
+      network.enable = true;
+      nix.enable = true;
+      nixpkgs.enable = true;
       openssh.enable = true;
-      service = {
-        gitea.enable = true;
-        nextcloud.enable = true;
-      };
+      qemuguest.enable = true;
+      sops.enable = false;
+      state.enable = true;
+      timezone.enable = true;
+      users.enable = true;
+      vmVariant.enable = false;
+      zram.enable = false;
+      zfs.enable = true;
+    };
+    borg.asgard.enable = false;
+    sync.asgard.enable = false;
+    services = {
+      promtail.enable = false;
+      node-exporter.enable = false;
+      database.enable = false;
+      gitea.enable = false;
+      nextcloud.enable = false;
     };
     oci = {
-      immich.enable = true;
-      paperless.enable = true;
-    };
-    syncthing = {
-      asgard.enable = true;
-    };
-    system = {
-      qemuguest.enable = true;
+      immich.enable = false;
+      paperless.enable = false;
     };
   };
 
   environment = {
     sessionVariables = {LIBVA_DRIVER_NAME = "iHD";};
+  };
+
+  networking = {
+    firewall = {
+      allowedTCPPorts = [80 2283 3000 8000 8384];
+    };
   };
 
   hardware = {
@@ -119,21 +112,4 @@
   #     };
   #   };
   # };
-
-  networking = {
-    hostId = "76d9d1e8";
-    firewall = {
-      allowedTCPPorts = [80 2283 3000 8000 8384];
-    };
-  };
-
-  systemd = {
-    services = {
-      syncthing = {
-        environment = {
-          STNODEFAULTFOLDER = "true";
-        };
-      };
-    };
-  };
 }

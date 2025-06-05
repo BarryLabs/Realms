@@ -11,8 +11,24 @@ in {
     programs = {
       zathura = {
         enable = true;
+        mappings = {
+          K = "zoom in";
+          J = "zoom out";
+          r = "reload";
+          R = "rotate";
+          u = "scroll half-up";
+          d = "scroll half-down";
+          D = "toggle_page_mode";
+          i = "recolor";
+          H = "navigate previous";
+          L = "navigate next";
+          "<Right>" = "navigate next";
+          "<Left>" = "navigate previous";
+          "<Down>" = "scroll down";
+          "<Up>" = "scroll up";
+        };
         options = {
-          font = "Source Code Pro 14";
+          font = "JetBrainsMono 14";
           adjust-open = "width";
           pages-per-row = 1;
           selection-clipboard = "clipboard";
@@ -25,69 +41,36 @@ in {
           statusbar-v-padding = 0;
           page-padding = 1;
 
-          notification-error-bg = "#282828"; # bg
-          notification-error-fg = "#fb4934"; # bright:red
-          notification-warning-bg = "#282828"; # bg
-          notification-warning-fg = "#fabd2f"; # bright:yellow
-          notification-bg = "#282828"; # bg
-          notification-fg = "#b8bb26"; # bright:green
-          completion-bg = "#504945"; # bg2
-          completion-fg = "#ebdbb2"; # fg
-          completion-group-bg = "#3c3836"; # bg1
-          completion-group-fg = "#928374"; # gray
-          completion-highlight-bg = "#83a598"; # bright:blue
-          completion-highlight-fg = "#504945"; # bg2
-          index-bg = "#504945"; # bg2
-          index-fg = "#ebdbb2"; # fg
-          index-active-bg = "#83a598"; # bright:blue
-          index-active-fg = "#504945"; # bg2
-
-          inputbar-bg = "#282828"; # bg
-          inputbar-fg = "#ebdbb2"; # fg
-
-          statusbar-bg = "#504945"; # bg2
-          statusbar-fg = "#ebdbb2"; # fg
-
-          highlight-color = "#fabd2f"; # bright:yellow
-          highlight-active-color = "#fe8019"; # bright:orange
-
-          default-bg = "#282828"; # bg
-          default-fg = "#ebdbb2"; # fg
+          notification-error-bg = "#282828";
+          notification-error-fg = "#fb4934";
+          notification-warning-bg = "#282828";
+          notification-warning-fg = "#fabd2f";
+          notification-bg = "#282828";
+          notification-fg = "#b8bb26";
+          completion-bg = "#504945";
+          completion-fg = "#ebdbb2";
+          completion-group-bg = "#3c3836";
+          completion-group-fg = "#928374";
+          completion-highlight-bg = "#83a598";
+          completion-highlight-fg = "#504945";
+          index-bg = "#504945";
+          index-fg = "#ebdbb2";
+          index-active-bg = "#83a598";
+          index-active-fg = "#504945";
+          inputbar-bg = "#282828";
+          inputbar-fg = "#ebdbb2";
+          statusbar-bg = "#504945";
+          statusbar-fg = "#ebdbb2";
+          highlight-color = "#f9e2af";
+          highlight-active-color = "#fe8019";
+          default-bg = "#282828";
+          default-fg = "#ebdbb2";
           render-loading = true;
-          render-loading-bg = "#282828"; # bg
-          render-loading-fg = "#ebdbb2"; # fg
-
-          # Recolor book content's color
-          recolor-lightcolor = "#282828"; # bg
-          recolor-darkcolor = "#ebdbb2"; # fg
-          recolor-keephue = true; # keep original color
-        };
-
-        ################
-        # Key mappings #
-        ################
-        mappings = {
-          K = "zoom in";
-          J = "zoom out";
-
-          r = "reload";
-          R = "rotate";
-
-          u = "scroll half-up";
-          d = "scroll half-down";
-
-          D = "toggle_page_mode";
-
-          i = "recolor";
-
-          # next/previous page
-          H = "navigate previous";
-          L = "navigate next";
-
-          "<Right>" = "navigate next";
-          "<Left>" = "navigate previous";
-          "<Down>" = "scroll down";
-          "<Up>" = "scroll up";
+          render-loading-bg = "#282828";
+          render-loading-fg = "#ebdbb2";
+          recolor-lightcolor = "#282828";
+          recolor-darkcolor = "#ebdbb2";
+          recolor-keephue = true;
         };
       };
     };

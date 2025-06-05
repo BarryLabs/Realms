@@ -25,7 +25,7 @@ in {
           enable = true;
         };
         remotePlay = {
-          openFirewall = false;
+          openFirewall = true;
         };
       };
     };

@@ -108,8 +108,9 @@ in {
             general {
               gaps_in = 6
               gaps_out = 8
-              border_size = 2
+              border_size = 1
               allow_tearing = false
+              resize_on_border = true
             }
 
             input {
@@ -158,7 +159,6 @@ in {
               disable_splash_rendering = true
             }
 
-            windowrulev2 = opacity 0.85 0.85, class:^(kitty)$
             windowrulev2 = opacity 0.85 0.85, class:^(ghostty)$
             windowrulev2 = opacity 0.95 0.95, floating:1
             windowrulev2 = bordercolor rgb(00FF00), fullscreenstate:* 1
@@ -175,6 +175,7 @@ in {
               "$mod, Space, togglefloating"
               "$mod, RETURN, exec, ghostty"
               "$mod, B, exec, qutebrowser"
+              "$mod, E, exec, emoji"
               "$mod, V, exec, blender"
               "$mod, I, exec, gimp"
               "$mod, C, exec, hyprpicker"
