@@ -1,0 +1,20 @@
+#!/run/current-system/sw/bin/bash
+
+window=$(hyprctl activewindow | grep class)
+title=$(hyprctl activewindow | grep title)
+
+if [[ $window == "" || $title == "" ]]; then
+  echo "..."
+  exit 0
+fi
+
+toShow="$window - $title"
+maxLen=30
+
+suffix=""
+
+if test $(echo $toShow | wc -c) -ge $maxLen ; then
+  suffix=" ..."
+fi
+
+echo "${toShow:0:$maxLen}$suffix"

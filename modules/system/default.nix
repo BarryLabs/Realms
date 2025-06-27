@@ -1,0 +1,83 @@
+{
+  imports = [
+    ./com/bash.nix
+    ./com/bluetooth.nix
+    ./com/bootEFI.nix
+    ./com/bootGRUB.nix
+    ./com/cpu.nix
+    ./com/docs.nix
+    ./com/environment.nix
+    ./com/fhb.nix
+    ./com/fstrim.nix
+    ./com/gnupg.nix
+    ./com/governor.nix
+    ./com/impermanence.nix
+    ./com/kernel.nix
+    ./com/locale.nix
+    ./com/logrotate.nix
+    ./com/network.nix
+    ./com/nix.nix
+    ./com/nixpkgs.nix
+    ./com/openssh.nix
+    ./com/pipewire.nix
+    ./com/podman.nix
+    ./com/qemuguest.nix
+    ./com/sops.nix
+    ./com/state.nix
+    ./com/timezone.nix
+    ./com/udisks.nix
+    ./com/users.nix
+    ./com/virt-manager.nix
+    ./com/vmVariant.nix
+    ./com/waydroid.nix
+    ./com/xserver.nix
+    ./com/zfs.nix
+    ./com/zram.nix
+    ./com/zsh.nix
+
+    ./hosts
+
+    ./oci/immich.nix
+    ./oci/paperless.nix
+    ./oci/torrent.nix
+    ./oci/transcode.nix
+
+    ./programs/alvr
+    ./programs/appimages
+    ./programs/firejail
+    ./programs/hyprland
+    ./programs/localsend
+    ./programs/steam
+    ./programs/weylus
+
+    ./services/arr
+    ./services/borg
+    ./services/email
+    ./services/flatpak
+    ./services/frigate
+    ./services/gitea
+    ./services/gotify
+    ./services/grafana
+    ./services/home-assistant
+    ./services/homepage
+    ./services/k3s
+    ./services/loki
+    #./services/minecraft
+    ./services/n8n
+    ./services/nextcloud
+    #./services/nfs
+    ./services/node-exporter
+    ./services/openrgb
+    ./services/postgres
+    ./services/prometheus
+    ./services/promtail
+    ./services/qdrant
+    ./services/sddm
+    #./services/smb
+    ./services/sunshine
+    ./services/syncthing
+    ./services/teamspeak3
+    #./services/traefik
+    ./services/vpn
+  ];
+}
