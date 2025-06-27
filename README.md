@@ -5,7 +5,7 @@
 ## Abyss
 
 <img align="center" width="90%" src="https://github.com/BarryLabs/Realms/blob/main/common/abyss-desktop-1.png" />
-<img align="center" width="90%" src="https://github.com/BarryLabs/Realms/blob/main/common/abyss-desktop-1.png" />
+<img align="center" width="90%" src="https://github.com/BarryLabs/Realms/blob/main/common/abyss-desktop-2.png" />
 
 ## Yggdrasil
 
