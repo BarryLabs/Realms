@@ -4,13 +4,25 @@
   pkgs,
   ...
 }:
-with lib; let
+with lib;
+let
   cfg = config.augs.programs.steam;
-in {
-  options.augs.programs.steam.enable = mkEnableOption "enable steam and gamemode with stuffs";
+in
+{
+  options.augs.programs.steam.enable = mkEnableOption "enable steam essentials";
   config = mkIf cfg.enable {
+    nixpkgs = {
+      config = {
+        allowUnfreePredicate =
+          pkg:
+          builtins.elem (lib.getName pkg) [
+            "steam"
+            "steam-unwrapped"
+          ];
+      };
+    };
     environment = {
-      systemPackages = [pkgs.gamemode];
+      systemPackages = [ pkgs.gamemode ];
     };
     programs = {
       gamemode = {

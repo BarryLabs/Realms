@@ -10,6 +10,7 @@ pkgs.mkShell {
     rustfmt
     rust-analyzer
     pkg-config
+    sqlite
     openssl
   ];
 }

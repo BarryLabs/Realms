@@ -1,7 +1,7 @@
 {
   imports = [
-    ./chromium.nix
-    ./firefox.nix
-    ./qutebrowser.nix
+    ./chromium
+    ./firefox
+    ./qutebrowser
   ];
 }

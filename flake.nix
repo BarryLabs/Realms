@@ -1,15 +1,15 @@
 {
   description = ''
-    Realms
+    Title: Realms
 
     Install pre-configured servers including my daily drivers
     or pull simple modules for your own configuration.
 
     A couple individuals namely m3tam3re and zaney offer numerous resources and examples to
-    learn from. They helped me learn and I recommend you look into their work as well.
+    learn from. They helped me learn and I recommend to look into their work as well.
 
-    M3tam3re: https://code.m3ta.dev/m3tam3re
-    Zaney: https://gitlab.com/Zaney/zaneyos
+    1) M3tam3re: https://code.m3ta.dev/m3tam3re
+    2) Zaney: https://gitlab.com/Zaney/zaneyos
   '';
 
   inputs = {
@@ -33,7 +33,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nvf = {
-      #url = "github:BarryLabs/nvf-tsGrammarFix";
       url = "github:notashelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
     };
@@ -75,35 +74,13 @@
         "aarch64-darwin"
         "x86_64-darwin"
       ];
-      # TODO; What in the fk is happening here...
       forAllSystems = nixpkgs.lib.genAttrs archs;
     in
     {
-      packages =
-        let
-          regularPkgs = forAllSystems (arch: import ./derive nixpkgs.legacyPackages.${arch});
-        in
-        regularPkgs
-        // {
-          sys.s64 = regularPkgs.sys.s64 // {
-            proxmox-mini-image = inputs.nixos-generators.nixosGenerate {
-              system = sys.s64;
-              format = "proxmox";
-              modules = [
-                ./hosts/mini-iso
-              ];
-            };
-          };
-        };
-      # TODO; to here...?
-      overlays = import ./overlays { inherit inputs; };
-      homeManagerModules = import ./modules/home/derive;
+      overlays = import ./modules/overlays { inherit inputs; };
       nixosConfigurations = {
         abyss = nixpkgs.lib.nixosSystem {
           system = sys.s64;
-          specialArgs = {
-            inherit inputs outputs;
-          };
           modules = [
             disko.nixosModules.disko
             sops-nix.nixosModules.sops
@@ -122,6 +99,7 @@
         };
         yggdrasil = nixpkgs.lib.nixosSystem {
           system = sys.s64;
+          specialArgs = { inherit outputs; };
           modules = [
             disko.nixosModules.disko
             sops-nix.nixosModules.sops

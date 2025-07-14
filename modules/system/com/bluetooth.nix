@@ -1,13 +1,19 @@
 {
   config,
   lib,
+  pkgs,
   ...
 }:
-with lib; let
+with lib;
+let
   cfg = config.augs.com.bluetooth;
-in {
+in
+{
   options.augs.com.bluetooth.enable = mkEnableOption "enable base bluetooth module";
   config = mkIf cfg.enable {
+    environment.systemPackages = with pkgs; [
+      bluetui
+    ];
     hardware.bluetooth = {
       enable = true;
       powerOnBoot = true;

@@ -1,3 +1,3 @@
 {
-  zellij-ps = import ./zellij-ps.nix;
+  zellij-ps = import ./zellij-ps;
 }

@@ -6,65 +6,55 @@
   mods = {
     wm = {
       wayland = {
-        dunst.enable = true;
-        eww.enable = true;
-        hypridle.enable = true;
-        hyprland.enable = true;
-        hyprlock.enable = true;
-        rofi.enable = true;
-        waybar.enable = true;
-        wlogout.enable = true;
-        wlsunset.enable = true;
-        wpaperd.enable = true;
+        dunst.yggdrasil.enable = true;
+        eww.yggdrasil.enable = true;
+        hypridle.yggdrasil.enable = true;
+        hyprland.yggdrasil.enable = true;
+        hyprlock.yggdrasil.enable = true;
+        rofi.yggdrasil.enable = true;
+        wlogout.yggdrasil.enable = true;
+        wlsunset.yggdrasil.enable = true;
+        wpaperd.yggdrasil.enable = true;
       };
     };
     terminal = {
-      foot.enable = true;
-      ghostty.enable = true;
-      kitty.enable = true;
-      wezterm.enable = true;
+      wezterm.base.enable = true;
     };
     cli = {
-      bat.enable = true;
-      cava.enable = true;
-      eza.enable = false;
-      fastfetch.enable = true;
-      fzf.enable = true;
-      git.enable = true;
-      jujutsu.enable = true;
-      nixvim.enable = true;
-      nushell.enable = true;
-      nvf.enable = false;
-      starship.enable = true;
-      tealdeer.enable = true;
-      zellij.enable = true;
-      zoxide.enable = true;
-      # TODO; Convert shell scripts to nushell to turn off zsh.
-      zsh.enable = true;
+      bat.base.enable = true;
+      cava.base.enable = true;
+      eza.base.enable = false;
+      fastfetch.base.enable = true;
+      fzf.base.enable = true;
+      git.base.enable = true;
+      jujutsu.base.enable = true;
+      nixvim.base.enable = true;
+      nushell.base.enable = true;
+      starship.base.enable = true;
+      tealdeer.base.enable = true;
+      yazi.base.enable = true;
+      zellij.base.enable = true;
+      zoxide.base.enable = true;
+      zsh.base.enable = true;
     };
     browser = {
-      chromium.enable = false;
-      firefox.enable = true;
-      qutebrowser.enable = true;
-    };
-    files = {
-      ranger.enable = false;
-      yazi.enable = true;
+      firefox.base.enable = true;
+      qutebrowser.base.enable = true;
     };
     fonts = {
-      default.enable = true;
+      base.enable = true;
     };
     tools = {
-      btop.enable = true;
-      easyeffects.enable = true;
-      mangohud.enable = true;
-      mpv.enable = true;
-      obs.enable = true;
-      ollama.enable = true;
-      pidgin.enable = true;
-      podman.enable = true;
-      thunderbird.enable = true;
-      zathura.enable = true;
+      btop.base.enable = true;
+      easyeffects.base.enable = true;
+      mangohud.base.enable = true;
+      mpv.base.enable = true;
+      obs.wayland.enable = true;
+      ollama.nvidia.enable = true;
+      pidgin.base.enable = true;
+      podman.base.enable = true;
+      thunderbird.base.enable = true;
+      zathura.base.enable = true;
     };
   };
 }

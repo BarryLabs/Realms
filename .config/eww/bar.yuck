@@ -59,7 +59,7 @@
       :width "415px"
       :height "100px")
   (box
-    :class "calendar_box"
+    :class "cal_box"
     :orientation "h"
     :valign "fill"
     :halign "fill"
@@ -134,8 +134,8 @@
 
 ;; (defwidget system_menu []
 ;;   (eventbox
-;;     :onhover "${eww} update system_reveal=\"true""
-;;     :onhoverlost "${eww} update system_reveal=\"false""
+;;     :onhover "${eww} update system_reveal=\"true\""
+;;     :onhoverlost "${eww} update system_reveal=\"false\""
 ;;     :tooltip "System Menu"
 ;;     (box
 ;;       :class sys_menu_box
@@ -177,7 +177,7 @@
 ;;             (label
 ;;               :class "sys_labels"
 ;;               :valign "center"
-;;               :text "${}"))))))
+;;               :text "${}")))))))
 
 (defwidget ram []
   (eventbox

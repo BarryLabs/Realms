@@ -1,22 +1,24 @@
 {
   imports = [
-    ./bat.nix
-    ./carapace.nix
-    ./cava.nix
-    ./emacs.nix
-    ./eza.nix
-    ./fastfetch.nix
-    ./fzf.nix
-    ./git.nix
-    ./jujutsu.nix
-    ./nixvim.nix
-    ./nushell.nix
-    ./nvf.nix
-    ./starship.nix
-    ./tealdeer.nix
-    ./tmux.nix
-    ./zellij.nix
-    ./zoxide.nix
-    ./zsh.nix
+    ./bat
+    ./carapace
+    ./cava
+    ./emacs
+    ./eza
+    ./fastfetch
+    ./fzf
+    ./git
+    ./jujutsu
+    ./nixvim
+    ./nushell
+    ./nvf
+    ./ranger
+    ./starship
+    ./tealdeer
+    ./tmux
+    ./yazi
+    ./zellij
+    ./zoxide
+    ./zsh
   ];
 }

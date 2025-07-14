@@ -9,7 +9,7 @@ in {
   options.augs.com.docs.enable = mkEnableOption "enable the base documentation module";
   config = mkIf cfg.enable {
     documentation = {
-      enable = lib.mkDefault false;
+      enable = false;
     };
   };
 }

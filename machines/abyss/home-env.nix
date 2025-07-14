@@ -2,7 +2,8 @@
   pkgs,
   config,
   ...
-}: {
+}:
+{
   programs = {
     home-manager = {
       enable = true;
@@ -25,7 +26,6 @@
           adwaita-icon-theme
         ];
       })
-      fd
       jq
       socat
       keepassxc
@@ -38,8 +38,6 @@
       blender
       gimp
       libreoffice
-      tor-browser
-      bluetui
       deluge
       grim
       slurp

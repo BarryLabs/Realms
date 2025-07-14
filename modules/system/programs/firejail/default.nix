@@ -4,9 +4,11 @@
   pkgs,
   ...
 }:
-with lib; let
+with lib;
+let
   cfg = config.augs.programs.firejail;
-in {
+in
+{
   options.augs.programs.firejail.enable = mkEnableOption "enable firejail";
   config = mkIf cfg.enable {
     programs = {
@@ -21,10 +23,14 @@ in {
             executable = "${pkgs.lib.getBin pkgs.mpv}/bin/mpv";
             profile = "${pkgs.firejail}/etc/firejail/mpv.profile";
           };
-          # firefox = {
-          #   executable = "${pkgs.lib.getBin pkgs.firefox}/bin/firefox";
-          #   profile = "${pkgs.firejail}/etc/firejail/firefox.profile";
-          # };
+          zathura = {
+            executable = "${pkgs.lib.getBin pkgs.zathura}/bin/zathura";
+            profile = "${pkgs.firejail}/etc/firejail/zathura.profile";
+          };
+          firefox = {
+            executable = "${pkgs.lib.getBin pkgs.firefox}/bin/firefox";
+            profile = "${pkgs.firejail}/etc/firejail/firefox.profile";
+          };
           # zen = {
           #   executable = "${pkgs.lib.getBin pkgs.zen}/bin/zen";
           #   profile = "${pkgs.firejail}/etc/firejail/zen.profile";

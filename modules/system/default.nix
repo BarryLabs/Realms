@@ -1,24 +1,33 @@
 {
   imports = [
+    ./com/apparmor.nix
     ./com/bash.nix
     ./com/bluetooth.nix
     ./com/bootEFI.nix
     ./com/bootGRUB.nix
+    ./com/coredump.nix
     ./com/cpu.nix
+    ./com/doas.nix
     ./com/docs.nix
     ./com/environment.nix
     ./com/fhb.nix
+    ./com/fonts.nix
     ./com/fstrim.nix
     ./com/gnupg.nix
     ./com/governor.nix
+    #./com/hmDerivations.nix
+    ./com/hyprlandPortal.nix
     ./com/impermanence.nix
-    ./com/kernel.nix
+    ./com/kernelDaily.nix
+    ./com/kernelServe.nix
     ./com/locale.nix
     ./com/logrotate.nix
     ./com/network.nix
     ./com/nix.nix
     ./com/nixpkgs.nix
+    ./com/nvidiaGPU.nix
     ./com/openssh.nix
+    ./com/pam.nix
     ./com/pipewire.nix
     ./com/podman.nix
     ./com/qemuguest.nix
@@ -30,12 +39,11 @@
     ./com/virt-manager.nix
     ./com/vmVariant.nix
     ./com/waydroid.nix
+    ./com/xboxController.nix
     ./com/xserver.nix
     ./com/zfs.nix
     ./com/zram.nix
     ./com/zsh.nix
-
-    ./hosts
 
     ./oci/immich.nix
     ./oci/paperless.nix
@@ -45,6 +53,7 @@
     ./programs/alvr
     ./programs/appimages
     ./programs/firejail
+    ./programs/ghidra
     ./programs/hyprland
     ./programs/localsend
     ./programs/steam

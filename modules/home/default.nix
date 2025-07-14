@@ -2,11 +2,11 @@
   imports = [
     ./browser
     ./cli
+    ./ext
     #./derive
-    ./file
-    ./files
+    #./file
     ./fonts
-    ./script
+    #./script
     ./terminal
     ./tools
     ./wm

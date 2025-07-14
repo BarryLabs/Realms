@@ -1,11 +1,11 @@
 <div align="center">
 
-# Realms (Alpha)
+# Realms (Beta)
 
 ## Abyss
 
 <img align="center" width="90%" src="https://github.com/BarryLabs/Realms/blob/main/common/abyss-desktop-1.png" />
-<img align="center" width="90%" src="https://github.com/BarryLabs/Realms/blob/main/common/abyss-desktop-2.png" />
+<img align="center" width="90%" src="https://github.com/BarryLabs/Realms/blob/main/common/abyss-desktop-1.png" />
 
 ## Yggdrasil
 
@@ -31,7 +31,7 @@ The product is to be a repository containing basic system modules, my preferred
 environment as customized programs and services as well as fully configured
 machines for a number of different tasks. This project should then also allow a
 simple format to quickly customize like-systems and build new machines while
-maintaining the best security posture possible.
+maintaining a solid security posture.
 
 Many of these machines are servers highlighted in the table below however my
 workflow exists in my daily drivers _Abyss_ and _Yggdrasil_.
@@ -40,8 +40,6 @@ workflow exists in my daily drivers _Abyss_ and _Yggdrasil_.
   `.gitignore`. As such, secrets, automated backups and utility from OCI
   containers are not yet included. Any issues can more than likely be addressed
   quickly manually before I fix them directly.
-
-- This repo is currently subject to heavy changes.
 
 ## Roadmap
 <div align="center">
@@ -55,7 +53,7 @@ In no specific order;
 - Finalize Neovim configuration.
 - Fix Gamemode?
 - Finalize base modules.
-- Modularize everything possible.
+- A couple ideas for Eww.
 
 ## Workflow
 
@@ -64,8 +62,8 @@ In no specific order;
 - **Logout**: wlogout
 - **Notifications**: eww/dunst
 - **Bar**: eww/waybar
-- **Terminal**: ghostty/kitty/wezterm/foot
-- **Multiplexer**: zellij/tmux | ghostty/kitty/wezterm
+- **Terminal**: wezterm/ghostty/kitty/foot
+- **Multiplexer**: zellij/tmux | wezterm/ghostty/kitty
 - **Shell**: nushell/zsh/bash
 - **VCS**: jujutsu/git
 - **Editor**: nvim/emacs/nano
@@ -98,7 +96,6 @@ In no specific order;
 - fzf
 - pidgin
 - tealdeer
-- thefuck
 - zoxide
 
 ## Usage

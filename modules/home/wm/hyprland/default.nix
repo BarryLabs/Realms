@@ -1,14 +1,14 @@
 {
   imports = [
-    ./dunst.nix
-    ./eww.nix
-    ./hyprland.nix
-    ./hypridle.nix
-    ./hyprlock.nix
-    ./rofi.nix
-    ./wlsunset.nix
-    ./waybar.nix
-    ./wlogout.nix
-    ./wpaperd.nix
+    ./dunst
+    ./eww
+    ./hyprland
+    ./hypridle
+    ./hyprlock
+    ./rofi
+    ./wlsunset
+    ./waybar
+    ./wlogout
+    ./wpaperd
   ];
 }

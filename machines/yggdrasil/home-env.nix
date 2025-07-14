@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   programs = {
     home-manager = {
       enable = true;
@@ -11,9 +12,6 @@
     enableNixpkgsReleaseCheck = false;
     sessionVariables = {
       EDITOR = "nvim";
-			DISPLAY = ":0";
-      NIXOS_OZONE_WL = 1;
-      WAYLAND_DISPLAY = "wayland-1";
       STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d";
     };
     packages = with pkgs; [
@@ -27,6 +25,7 @@
       grim
       slurp
       swappy
+      ydotool
       usbutils
       mpvpaper
       hyprpicker
@@ -40,7 +39,6 @@
       runelite
       libreoffice
       monero-gui
-      tor-browser
     ];
   };
 }

@@ -1,7 +1,7 @@
 #!/run/current-system/sw/bin/bash
 
-window=$(hyprctl activewindow | grep class)
-title=$(hyprctl activewindow | grep title)
+window=$(hyprctl activewindow | grep class | awk '{print $2}')
+title=$(hyprctl activewindow | grep title | awk '{print $2}')
 
 if [[ $window == "" || $title == "" ]]; then
   echo "..."
@@ -13,8 +13,11 @@ maxLen=30
 
 suffix=""
 
-if test $(echo $toShow | wc -c) -ge $maxLen ; then
-  suffix=" ..."
-fi
+# if test $(echo $toShow | wc -c) -ge $maxLen ; then
+#   suffix=" ..."
+# fi
+#
 
-echo "${toShow:0:$maxLen}$suffix"
+echo "$toShow"
+
+#echo "${toShow:0:$maxLen}$suffix"

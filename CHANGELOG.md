@@ -9,3 +9,5 @@
 </div>
 
 ## [Pre-Release]
+
+- [July 14, 2025] Intro to Realms Beta

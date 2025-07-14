@@ -3,9 +3,11 @@
   lib,
   ...
 }:
-with lib; let
+with lib;
+let
   cfg = config.augs.com.bash;
-in {
+in
+{
   options.augs.com.bash.enable = mkEnableOption "enable server bash configuration";
   config = mkIf cfg.enable {
     programs = {
@@ -14,8 +16,13 @@ in {
           enable = true;
         };
         shellAliases = lib.mkDefault {
-          nixbuild = "sudo nixos-rebuild switch";
-          nixclean = "sudo nix-collect-garbage -d";
+          c = "clear";
+          h = "history";
+
+          ports = "netstat -tulanp";
+
+          nr = "sudo nixos-rebuild switch";
+          nc = "sudo nix-collect-garbage -d";
         };
       };
     };
